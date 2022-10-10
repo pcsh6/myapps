@@ -92,3 +92,72 @@ if(!toggle_customSidebar) {
 	);
 	toggle_customSidebar = true;
 }
+
+$(function() {
+	if(document.getElementsByClassName('date-picker')) {
+	    $('.date-picker').datepicker({
+	        minDate: 0
+	    }).datepicker("setDate",'now');
+	}
+
+	if(document.getElementById('autocomplete')) {
+	    $('#autocomplete').autocomplete({
+	        source: function(request, response) {
+	            var terms = request.term;
+
+	            $.ajax({
+	                type: 'post',
+	                url: base_url + "find-driver",
+	                dataType: "json",
+	                data: {
+	                    term: terms
+	                },
+	                success: function(data) {
+	                    response(data);
+	                }
+	            });
+	        },
+	        minLength: 3,
+			focus: function( event, ui ) {
+				$( "#autocomplete" ).val( ui.item.fullname );
+				return false;
+			},
+			select: function( event, ui ) {
+				console.log(ui.item);
+				$( "#autocomplete" ).val( ui.item.fullname );
+				
+				$('#police_num').val(ui.item.police_num);
+
+				return false;
+			}
+	    })
+	    .autocomplete( "instance" )._renderItem = function( ul, item ) {
+	      return $( "<li>" )
+	        .append( "<div>" + item.fullname + "<br>" + item.police_num + "</div>" )
+	        .appendTo( ul );
+	    };;
+	}
+
+    $("#checkall").click(function(){
+	    $('input:checkbox').not(this).prop('checked', this.checked);
+	});
+
+	$("input[type='checkbox']").change(function() {
+		// console.log('alert')
+		if(this.checked){
+			$('<input>').attr({
+				type: 'hidden',
+				name: 'no_do[]',
+				value: $(this).data('do')
+			}).appendTo($(this));
+			$('<input>').attr({
+				type: 'hidden',
+				name: 'no_so[]',
+				value: $(this).data('so')
+			}).appendTo($(this));
+		} else {
+			$(this).children().remove();
+		}
+	})
+
+});

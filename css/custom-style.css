@@ -1,0 +1,154 @@
+/*
+| -------------------------------------------------------------------------
+| General Style
+| -------------------------------------------------------------------------
+*/
+body {
+	font-size: .85rem;
+}
+p {
+	font-size: .85rem;	
+}
+
+
+
+/*
+| -------------------------------------------------------------------------
+| Font Custom
+| -------------------------------------------------------------------------
+*/
+.font-sm {
+	font-size: .75rem;
+}
+.font-md {
+	font-size: .85rem;
+}
+.font-lg {
+	font-size: 1rem;
+}
+
+
+/*
+| -------------------------------------------------------------------------
+| Padding Custom
+| -------------------------------------------------------------------------
+*/
+.padding-sm {
+	padding: 0.25rem 0.5rem !important;
+}
+.padding-lg {
+	padding: 0.5rem 1rem !important;
+}
+
+
+/*
+| -------------------------------------------------------------------------
+| Background Color
+| -------------------------------------------------------------------------
+*/
+.bg-custom-default {
+	background-color: #6c757d !important;
+	color: #fff !important;
+}
+.bg-custom-light {
+	background-color: #f8f9fa !important;
+	color: #343a40 !important;
+}
+.bg-custom-warning {
+	background-color: #ffc107 !important;
+	color: #343a40 !important;
+}
+.bg-custom-success {
+	background-color: #28a745 !important;
+	color: #fff !important;
+}
+.bg-custom-danger {
+	background-color: #dc3545 !important;
+	color: #fff !important;
+}
+
+
+
+/*
+| -------------------------------------------------------------------------
+| Alert
+| -------------------------------------------------------------------------
+*/
+.bootstrap-alert {
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
+.bootstrap-alert-primary {
+    color: #004085;
+    background-color: #cce5ff;
+    border-color: #b8daff;
+}
+.bootstrap-alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+.bootstrap-alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+.bootstrap-alert-warning {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+.bootstrap-alert-info {
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+}
+.bootstrap-alert-dark {
+    color: #1b1e21;
+    background-color: #d6d8d9;
+    border-color: #c6c8ca;
+}
+
+
+
+/*
+| -------------------------------------------------------------------------
+| Card
+| -------------------------------------------------------------------------
+*/
+.card .card-header, 
+.card .card-body {
+	padding: 15px;
+}
+
+
+
+/*
+| -------------------------------------------------------------------------
+| Images Scale Fit
+| -------------------------------------------------------------------------
+*/
+.images-scale-fit-150 {
+    height:150px;
+    background-color: #eee;
+    object-fit: scale-down;
+} 
+
+
+
+/*
+| -------------------------------------------------------------------------
+| Button
+| -------------------------------------------------------------------------
+*/
+.btn-remove-on-top-right {
+	position: absolute;
+    top: 0;
+    right: 0;
+    padding: 4px 4px;
+    color: #888;
+    background-color: transparent;
+}

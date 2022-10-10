@@ -1,0 +1,19 @@
+.dLoader {
+	position: fixed;
+	z-index: 999999;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255,255,255,0.85);
+}
+.dLoader > div {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.dLoader > div > img {
+	margin-bottom: 10px;
+}
